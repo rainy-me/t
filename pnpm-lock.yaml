@@ -5,7 +5,7 @@ specifiers:
   '@tauri-apps/cli': ^1.0.0-beta.10
   monaco-editor-core: ^0.30.0
   typescript: ^4.3.2
-  vite: ^2.6.4
+  vite: ^2.6.13
 
 dependencies:
   '@tauri-apps/api': 1.0.0-beta.8

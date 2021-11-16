@@ -2,7 +2,14 @@ import * as monaco from "monaco-editor-core";
 // @ts-ignore
 import EditorWorker from "monaco-editor-core/esm/vs/editor/editor.worker?worker";
 
-monaco.editor.defineTheme("sqx", {
+// @ts-ignore
+self.MonacoEnvironment = {
+  getWorker() {
+    return new EditorWorker();
+  },
+};
+
+monaco.editor.defineTheme("t", {
   base: "vs-dark",
   inherit: true,
   rules: [],
@@ -11,18 +18,11 @@ monaco.editor.defineTheme("sqx", {
   },
 });
 
-monaco.editor.create(document.getElementById("app"), {
+monaco.editor.create(document.getElementById("app")!, {
   value: "Hi🌟!",
   fontSize: 20,
   minimap: { enabled: false },
   automaticLayout: true,
   language: "markdown",
-  theme: "sqx",
+  theme: "t",
 });
-
-// @ts-ignore
-self.MonacoEnvironment = {
-  getWorker() {
-    return new EditorWorker();
-  },
-};
