@@ -1,8 +1,16 @@
 import * as monaco from "monaco-editor-core";
-// @ts-ignore
+import { Environment } from "monaco-editor-core/esm/vs/editor/editor.api";
 import EditorWorker from "monaco-editor-core/esm/vs/editor/editor.worker?worker";
 
-// @ts-ignore
+declare global {
+  interface Window {
+    /**
+     * @see https://github.com/microsoft/monaco-editor/issues/2580
+     */
+    MonacoEnvironment: Environment;
+  }
+}
+
 self.MonacoEnvironment = {
   getWorker() {
     return new EditorWorker();
