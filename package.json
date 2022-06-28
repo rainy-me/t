@@ -4,12 +4,12 @@
     "ta": "tauri"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^1.0.0-beta.10",
-    "typescript": "^4.3.2",
-    "vite": "^2.6.13"
+    "@tauri-apps/cli": "^1.0.0",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.13"
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.0.0-beta.8",
-    "monaco-editor-core": "^0.30.0"
+    "@tauri-apps/api": "^1.0.1",
+    "monaco-editor-core": "^0.33.0"
   }
 }
